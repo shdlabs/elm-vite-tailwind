@@ -1,0 +1,66 @@
+@import url("https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "RobotoFlex";
+  src:
+    url("/assets/RobotoFlex.ttf") format("truetype supports variations"),
+    url("/assets/RobotoFlex.ttf") format("truetype-variations");
+}
+
+@layer base {
+  :root {
+    --wght: 400;
+    --wdth: 100;
+    --opsz: 14;
+    --GRAD: 0;
+    --slnt: 0;
+    --XTRA: 468;
+    --XOPQ: 96;
+    --YOPQ: 79;
+    --YTLC: 514;
+    --YTUC: 712;
+    --YTAS: 750;
+    --YTDE: -203;
+    --YTFI: 738;
+  }
+
+  .material-symbols-sharp {
+    font-variation-settings:
+      "FILL" 0,
+      "wght" 300,
+      "GRAD" 0,
+      "opsz" 20;
+  }
+
+  body {
+    @apply font-robotoV min-h-screen w-full bg-contain bg-fixed bg-no-repeat;
+    background-image: linear-gradient(
+      to right top,
+      #e696ee,
+      #d49ff4,
+      #c2a6f7,
+      #b3adf7,
+      #a6b2f4,
+      #99b9f6,
+      #8fc0f6,
+      #88c6f4,
+      #7dd1f5,
+      #79daf2,
+      #7de3ec,
+      #89ebe4
+    );
+  }
+  div {
+    perspective: 1000px;
+
+    h1 {
+      &:hover {
+        @apply [transform:rotate3d(0,0,0,3deg)_scale(1)_translateZ(30px)];
+      }
+    }
+  }
+}
